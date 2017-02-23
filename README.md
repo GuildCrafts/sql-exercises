@@ -7,18 +7,18 @@ Base repository for the [core-sql](https://github.com/GuildCrafts/web-developmen
 - [ ] Create a Postgres database called `sql-exercises`
 - [ ] Create the schema for the following tables
   - [ ] table name: student,  columns: id, name, grade
-          - id is the primary key
-          - name is only their first name
-          - grade is an integer
-      - write the SQL in the file `sql/01-create-table-student.sql`
+    - id is the primary key
+    - name is only their first name
+    - grade is an integer
+    - write the SQL in the file `sql/01-create-table-student.sql`
   - [ ] table name: friend, columns: id1, id2
-          - id1 is a foreign key reference to a learner
-          - id2 is a foreign key reference to a learner
-      - write the SQL in the file `sql/02-create-table-friend.sql`
+    - id1 is a foreign key reference to a learner
+    - id2 is a foreign key reference to a learner
+    - write the SQL in the file `sql/02-create-table-friend.sql`
   - [ ] table name: like, columns: id1, id2
-          - id1 is a foreign key reference to a learner
-          - id2 is a foreign key reference to a learner
-      - write the SQL in the file `sql/03-create-table-like.sql`
+    - id1 is a foreign key reference to a learner
+    - id2 is a foreign key reference to a learner      
+    - write the SQL in the file `sql/03-create-table-like.sql`
 - [ ] Run the SQL for the schema against the `sql-exercises` database to create the tables
 - [ ] Load the data into the tables (make sure you have created the tables above)
   - [ ] SQL query to load the CSV file `data/learners.csv` for the `learner` table
