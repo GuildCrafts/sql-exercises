@@ -25,7 +25,7 @@ Create the schema for the following tables.
 - `id2` is a foreign key reference to a student
 - write the SQL in the file `sql/02-create-table-friend.sql`
 
-**03:** Table name: `like`, columns: `liker_id`, `likee_id`
+**03:** Table name: `student_like`, columns: `liker_id`, `likee_id`
 - `liker_id` is a foreign key reference to a student
 - `likee_id` is a foreign key reference to a student
 - write the SQL in the file `sql/03-create-table-like.sql`
@@ -42,7 +42,7 @@ Load the data into the tables (make sure you have created the tables above).
 **05:** SQL query to load the CSV file `data/friends.csv` for the `friend` table
 <br>Write the query in the file `sql/05-load-table-friend.sql`
 
-**06:** SQL query to load the CSV file `data/likes.csv` for the `like` table
+**06:** SQL query to load the CSV file `data/likes.csv` for the `student_like` table
 <br>Write the SQL in the file `sql/06-load-table-like.sql`
 
 Run the queries to load the data into the tables.
