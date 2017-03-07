@@ -3,4 +3,4 @@ CREATE DATABASE sql_exercises;
 
 \c sql_exercises;
 
-CREATE TABLE student (id INTEGER, name TEXT, grade INTEGER);
+CREATE TABLE student (id INTEGER PRIMARY KEY, name TEXT, grade INTEGER);
