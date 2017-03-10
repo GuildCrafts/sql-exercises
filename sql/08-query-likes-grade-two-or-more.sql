@@ -1,4 +1,9 @@
-select * from 
+SELECT 	name, grade
+FROM 	student.student
+JOIN 	student.student_like
+ON 		student.student.id = student.student_like.liker_id;
+ 	
+
 
 (select name 
 from student.student 

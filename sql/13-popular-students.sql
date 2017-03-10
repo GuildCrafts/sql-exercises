@@ -1,6 +1,6 @@
-select 		name 
-from 		student.student_like
-join 		student.student
-on 			student.student.id = student.student_like.likee_id
-group by 	name 
-having 		count(likee_id) >= 2;
+SELECT 		name 
+FROM 		student.student_like
+JOIN 		student.student
+ON 			student.student.id = student.student_like.likee_id
+GROUP BY 	name 
+HAVING		count(likee_id) >= 2;
