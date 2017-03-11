@@ -14,8 +14,8 @@ ON
 JOIN
 	student
 AS 
-	friends
+	student_who_is_liked
 ON
 	student_who_is_liked.id = student_like.likee_id
 WHERE
-	student_who_likes.grade - student_who_is_liked.grade >= 1
+	student_who_likes.grade - student_who_is_liked.grade >= 1;
