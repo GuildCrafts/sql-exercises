@@ -22,7 +22,7 @@ student2
 on 
 student2.id = friend.id2
 where
-student.name='Gabriel's
+student.name='Gabriel'
 
 --alternative 2
 
