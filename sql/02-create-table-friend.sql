@@ -1,11 +1,5 @@
-psql sql-exercises; --allows me to switch in terminal
-	
+DROP TABLE IF EXISTS friend;
 CREATE TABLE friend (
-	
-		id1 INT NOT NULL, 
-	
-		id2 INT NOT NULL
-	
-		);
-
-\d student.friend; --allows me to see the table in terminal
+	id1 INTEGER REFERENCES student(id),
+	id2 INTEGER REFERENCES student(id),
+);

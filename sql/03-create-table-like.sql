@@ -1,11 +1,5 @@
-psql sql-exercises; --allows me to switch in terminal
-
+DROP TABLE IF EXISTS student_like;
 CREATE TABLE student_like (
-		
-		liker_id INT NOT NULL, 
-		
-		likee_id INT NOT NULL
-		
-		);
-
-\d student.student_like; --allows me to see the table in terminal
+	liker_id INTEGER REFERENCES student(id), 
+	likee_id INTEGER REFERENCES student(id),
+);

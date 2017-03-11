@@ -14,3 +14,5 @@ INSERT INTO student VALUES (1304, 'Jordan', 12);
 INSERT INTO student VALUES (1025, 'John', 12);
 INSERT INTO student VALUES (1934, 'Kyle', 12);
 INSERT INTO student VALUES (1661, 'Logan', 12);
+
+--laod it through the path
