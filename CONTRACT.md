@@ -8,7 +8,7 @@ This goal will likely be within your ZPD if you…
 - Are interested in learning about writing SQL queries
 - Are interested in learning how to install postgres & use the psql command line tool.
 
-###Description
+### Description
 
 A day-by-day structured deep dive into the basics of SQL. Complete lessons, and read tutorials.
 
@@ -18,13 +18,13 @@ For the first few days, you’ll be working on existing courses and completing t
 
 Fork the sql-exercises repo, and use the fork as your artifact. Complete all the exercises without looking at solutions on the internet.
 
-###Context
+### Context
 
 In order to build web applications, it’s important to get a solid grounding into the basics of SQL. Proficiency in SQL is a core skill needed to build the backend.
 
 Becoming a full stack web developer means that you need to be comfortable with writing SQL queries and understanding relational database design.
 
-###Specifications
+### Specifications
 
 Day 1: SQL Basics & Advanced SQL Queries
 
@@ -34,7 +34,7 @@ Day 1: SQL Basics & Advanced SQL Queries
 Day 2: Relational Queries
 
  - [x] Complete the Relational Queries course
- - [] Complete the Modifying databases with SQL course
+ - [x] Complete the Modifying databases with SQL course
 
 Day 3: Install Postgres and Complete Tutorials with psql
 
