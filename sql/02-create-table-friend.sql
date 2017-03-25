@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS friends;
+
+CREATE TABLE friends (
+  id1 INTEGER,
+  id2 INTEGER
+)
