@@ -6,11 +6,12 @@ Base repository for the [core-sql](http://jsdev.learnersguild.org/goals/178) goa
 
 ## Getting Started
 
-Create a Postgres database called `sql-exercises`. Use this database for all of the exercises.
+Create a Postgres database called `sql-exercises`. Use this database for all of the exercises. // SHOULD BE STEP 1
 
 ## Exercises
 
 ### Build the Schema
+-- CREATE A DATABASE FIRST CALLED 'sql-exercises'
 
 Create the schema for the following tables.
 
