@@ -10,6 +10,8 @@ Create a Postgres database called `sql_exercises`. Use this database for all of 
 
 ## Exercises
 
+Solutions to these exercises can be found in the [`solutions`](https://github.com/GuildCrafts/sql-exercises/tree/solutions) branch. These are here to assist you when you're really stuck, don't overuse them. Remember that there are many ways to solve each of these problems and the [`solutions`](https://github.com/GuildCrafts/sql-exercises/tree/solutions) represents only one option.
+
 ### Build the Schema
 
 Create the schema for the following tables.
