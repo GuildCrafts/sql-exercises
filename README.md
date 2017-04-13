@@ -6,9 +6,11 @@ Base repository for the [core-sql](http://jsdev.learnersguild.org/goals/178) goa
 
 ## Getting Started
 
-Create a Postgres database called `sql-exercises`. Use this database for all of the exercises.
+Create a Postgres database called `sql_exercises`. Use this database for all of the exercises.
 
 ## Exercises
+
+Solutions to these exercises can be found in the [`solutions`](https://github.com/GuildCrafts/sql-exercises/tree/solutions) branch. These are here to assist you when you're really stuck, don't overuse them. Remember that there are many ways to solve each of these problems and the [`solutions`](https://github.com/GuildCrafts/sql-exercises/tree/solutions) represents only one option.
 
 ### Build the Schema
 
@@ -66,10 +68,10 @@ Make sure each question is copied and pasted in the file which contains the SQL,
 **11:** For every situation where student A likes student B, but we have no information about whom B likes (that is, B's id does not appear in the `liker_id` column of the like table), return A and B's names and grades.
 <br>Write the SQL in the file `sql/11-liked-but-does-not-like.sql`
 
-**12:** For each student A who likes a student B where the two are not friends, find if they have a friend C in common (who can introduce them!). For all such trios, return the name and grade of A, B, and C.
+Stretch: **12:** For each student A who likes a student B where the two are not friends, find if they have a friend C in common (who can introduce them!). For all such trios, return the name and grade of A, B, and C.
 <br>Write the SQL in the file `sql/12-find-friends-in-common.sql`
 
-**13:** Find the name and grade of all students who are liked by more than one other student.
+Stretch: **13:** Find the name and grade of all students who are liked by more than one other student.
 <br>Write the SQL in the file `sql/13-popular-students.sql`
 
 ## Useful Resources
