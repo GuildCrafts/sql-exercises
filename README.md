@@ -1,5 +1,7 @@
 # SQL Exercises
 
+
+
 Exercises to help exercise the SQL muscles.
 
 Base repository for the [core-sql](http://jsdev.learnersguild.org/goals/178) goal.
