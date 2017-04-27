@@ -7,6 +7,6 @@ write the SQL in the file sql/02-create-table-friend.sql
 */
 DROP TABLE IF EXISTS friend;
 CREATE TABLE friend (
-	id1 INT,
-	id2 INT
+	id1 INT REFERENCES student(id),
+	id2 INT REFERENCES student(id)
 );

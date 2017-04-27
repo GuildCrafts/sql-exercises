@@ -8,6 +8,6 @@ write the SQL in the file sql/03-create-table-like.sql
 
 DROP TABLE IF EXISTS student_like;
 CREATE TABLE student_like (
-	liker_id INT,
-	likee_id INT
+	liker_id INT REFERENCES student(id),
+	likee_id INT REFERENCES student(id)
 );
