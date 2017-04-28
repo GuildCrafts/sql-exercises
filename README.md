@@ -1,12 +1,12 @@
 # Day 1: SQL Basics & Advanced SQL Queries
 
-- [x]Complete the SQL Basics course
-- [x]Complete the Advanced SQL queries course
+- [x] Complete the SQL Basics course
+- [x] Complete the Advanced SQL queries course
 
 # Day 2: Relational Queries
 
-- [x]Complete the Relational Queries course
-- [x]Complete the Modifying databases with SQL course
+- [x] Complete the Relational Queries course
+- [x] Complete the Modifying databases with SQL course
 
 # Day 3: Install Postgres and Complete Tutorials with psql
 
@@ -45,8 +45,8 @@
   - [x] sql/09-mutual-likes.sql
   - [x] sql/10-not-liked.sql
   - [x] sql/11-liked-but-does-not-like.sql
- [Stretch] sql/12-find-friends-in-common.sql
- [Stretch] sql/13-popular-students.sql
+  - [ ] sql/12-find-friends-in-common.sql
+  - [ ] sql/13-popular-students.sql
 
 # Day 5: Exercises on SQL Bolt
 
