@@ -31,7 +31,7 @@
  - [x] complete the tutorial for the order by clause here
  - [x] complete the tutorial for the group by clause here
 
-#Day 4: Mini Project & Exercises
+# Day 4: Mini Project & Exercises
 
  - [x] Exercises 1-11 in the sql-exercises repo are complete and written to the appropriate file:
   - [x] sql/01-create-table-student.sql
