@@ -1,4 +1,4 @@
--- For every student who likes someone 2 or more grades younger than themselves, return that student's name and grade, and the name and grade of the student they like.
+-- For every student who likes someone 2 or more grades younger than themselves, return that student's name and grade, and the name and grade of the student they like. 
 
 SELECT a.name liker_name, a.grade liker_grade, b.name likee_name, b.grade likee_grade
 	FROM student_like
