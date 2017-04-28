@@ -1,5 +1,5 @@
 CREATE TABLE student (
-  id INT PRIMARY KEY,
-  name TEXT,
-  grade INT
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255),
+  grade INTEGER
 );
