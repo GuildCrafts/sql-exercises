@@ -5,16 +5,14 @@ Write the SQL in the file sql/09-mutual-likes.sql
 */
 
 
-
-
-ELECT s1.name liker_name, s1.grade liker_grade, s2.name likee_name, s2.grade likee_grade
+SELECT student1.name liker_name, student1.grade liker_grade, student2.name likee_name, student2.grade likee_grade
 	FROM (
-		SELECT a.liker_id, a.likee_id
-			FROM student_like a
-			JOIN student_like b
-			ON a.liker_id = b.likee_id AND b.liker_id = a.likee_id
+		SELECT like1.liker_id, like1.likee_id
+			FROM student_like like1
+			JOIN student_like like2
+			ON like1.liker_id = like2.likee_id AND like2.liker_id = like1.likee_id
 		) mutual
-	JOIN student s1 ON s1.id = mutual.liker_id
-	JOIN student s2 ON s2.id = mutual.likee_id
-	WHERE s1.name < s2.name
-	ORDER BY s1.name ASC;
+	JOIN student student1 ON student1.id = mutual.liker_id
+	JOIN student student2 ON student2.id = mutual.likee_id
+	WHERE student1.name < student2.name
+	ORDER BY student1.name ASC;
