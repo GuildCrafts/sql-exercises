@@ -1,9 +1,21 @@
 /*
 Find the names of all students who are friends with someone named Gabriel.
 Write the SQL in the file sql/07-query-friends-gabriel.sql
+
+
+
+#####Other Test#####
+SELECT *
+	FROM STUDENT,FRIEND
+	WHERE student.id = friend.id2 AND student.name = 'Gabriel'
+
+#####Other Test#####
+
+
 */
 
-SELECT b.name
+SELECT f.name
   FROM friend
-  JOIN student a ON a.id = friend.id1
-  JOIN student b ON b.id = friend.id2 WHERE a.name = 'Gabriel';
+  JOIN student s ON s.id = friend.id1
+  JOIN student f ON f.id = friend.id2 
+  	WHERE s.name = 'Gabriel';
