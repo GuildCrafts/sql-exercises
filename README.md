@@ -33,7 +33,7 @@
 
 #Day 4: Mini Project & Exercises
 
- - [x]Exercises 1-11 in the sql-exercises repo are complete and written to the appropriate file:
+ - [x] Exercises 1-11 in the sql-exercises repo are complete and written to the appropriate file:
   - [x] sql/01-create-table-student.sql
   - [x] sql/02-create-table-friend.sql
   - [x] sql/03-create-table-like.sql
