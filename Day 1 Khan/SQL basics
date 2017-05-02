@@ -6,9 +6,9 @@ In this first step, create a table to store your list of books. It should have c
 */
 
 CREATE TABLE  books (id INTEGER, name TEXT, rating INTEGER);
-INSERT INTO books Values (1, "Parable of the Sower", 1);
-INSERT INTO books Values (2, "Parable of the Talents", 2);
-INSERT INTO books Values (3, "Fledgling", 3);
+INSERT INTO books VALUES (1, "Parable of the Sower", 1);
+INSERT INTO books VALUES (2, "Parable of the Talents", 2);
+INSERT INTO books VALUES (3, "Fledgling", 3);
 
 
 /*

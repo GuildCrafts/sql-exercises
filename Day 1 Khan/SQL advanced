@@ -101,9 +101,9 @@ INSERT INTO songs (artist, title)
     */
 
 SELECT title FROM songs WHERE artist = "Queen";
-SELECT name FROM artists WHERE genre LIKE "pop";
-Select title From songs Where artist IN (
-Select name From artists Where genre LIKE "Pop");
+SELECT name FROM artists WHERE genre = "Pop";
+SELECT title FROM songs Where artist IN (
+SELECT name FROM artists Where genre = "Pop");
 
 
 /* Challenge: The wordiest author
