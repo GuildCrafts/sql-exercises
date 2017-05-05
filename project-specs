@@ -38,8 +38,8 @@
   - [X] `sql/04-load-table-learner.sql`
   - [x] `sql/05-load-table-friend.sql`
   - [x] `sql/06-load-table-like.sql`
-  - [ ] `sql/07-query-friends-gabriel.sql`
-  - [ ] `sql/08-query-likes-grade-two-or-more.sql`
+  - [x] `sql/07-query-friends-gabriel.sql`
+  - [x] `sql/08-query-likes-grade-two-or-more.sql`
   - [ ] `sql/09-mutual-likes.sql`
   - [ ] `sql/10-not-liked.sql`
   - [ ] `sql/11-liked-but-does-not-like.sql`
