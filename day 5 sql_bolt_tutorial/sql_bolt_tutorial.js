@@ -24,11 +24,14 @@ SELECT * FROM movies WHERE id = 6;
 SELECT title, year FROM movies
 WHERE year BETWEEN 2000 AND 2010;
 
-SELECT title, year FROM movies
-WHERE year < 2000 OR year > 2010;
+SELECT title, year
+FROM movies
+WHERE year NOT BETWEEN 2000 AND 2010;
 
-SELECT title, year FROM movies
-WHERE year <= 2003;
+SELECT title, year
+FROM movies
+ORDER BY year
+LIMIT 5;
 
 /*
 Exercise 3 — Tasks
@@ -37,8 +40,8 @@ Find all the movies directed by John Lasseter ✓
 Find all the movies (and director) not directed by John Lasseter ✓
 Find all the WALL-* movies ✓
 */
-SELECT * FROM movies
-WHERE title LIKE '%toy story%';
+SELECT title FROM movies
+WHERE title LIKE 'Toy Story%';
 
 SELECT * FROM movies
 WHERE director = 'John Lasseter';
@@ -60,9 +63,9 @@ List the next five Pixar movies sorted alphabetically ✓
 SELECT DISTINCT director FROM movies
 ORDER BY director ASC;
 
-SELECT * FROM movies
-WHERE year > 2009
-ORDER BY year DESC;
+SELECT title, year FROM movies
+ORDER BY year DESC
+LIMIT 4;
 
 SELECT title FROM movies
 ORDER BY title ASC
@@ -112,11 +115,11 @@ List all the movies by their ratings in descending order ✓
 SELECT domestic_sales, international_sales FROM movies
 INNER JOIN boxoffice ON movies.id = boxoffice.movie_id;
 
-SELECT title, international_sales FROM movies
+SELECT title, domestic_sales, international_sales FROM movies
 INNER JOIN boxoffice ON movies.id = boxoffice.movie_id
 WHERE international_sales > domestic_sales;
 
-SELECT * FROM movies
+SELECT title, rating FROM movies
 INNER JOIN boxoffice ON movies.id = boxoffice.movie_id
 ORDER BY rating DESC;
 
@@ -149,7 +152,7 @@ SELECT DISTINCT building_name
 FROM buildings
 LEFT JOIN employees
 On buildings.building_name = employees.building
-WHERE name IS NULL
+WHERE role IS NULL
 
 /*
 Exercise 9 — Tasks
@@ -168,9 +171,10 @@ FROM movies
 JOIN boxoffice
 ON movies.id = boxoffice.movie_id;
 
-SELECT title, year
-FROM movies
-WHERE year % 2 = 0;
+SELECT title, year FROM movies
+JOIN boxoffice
+ON movies.id = boxoffice.movie_id
+WHERE YEAR % 2 =0;
 
 /*
 Exercise 10 — Tasks
@@ -200,14 +204,13 @@ SELECT role, COUNT(*) AS studio_artists
 FROM employees
 WHERE role = "Artist";
 
-SELECT role, COUNT(*) as studio_artists
+SELECT role, COUNT(*)
 FROM employees
-HAVING role;
+GROUP BY role;
 
 SELECT role, SUM(years_employed)
 FROM employees
-GROUP BY role
-HAVING role = "Engineer"
+WHERE role = 'Engineer'
 
 /*
 Exercise 12 — Tasks

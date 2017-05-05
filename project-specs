@@ -41,13 +41,13 @@
   - [x] `sql/07-query-friends-gabriel.sql`
   - [x] `sql/08-query-likes-grade-two-or-more.sql`
   - [ ] `sql/09-mutual-likes.sql`
-  - [ ] `sql/10-not-liked.sql`
+  - [X] `sql/10-not-liked.sql`
   - [ ] `sql/11-liked-but-does-not-like.sql`
   - [ ] [Stretch] `sql/12-find-friends-in-common.sql`
   - [ ] [Stretch] `sql/13-popular-students.sql`
 
 ### Day 5: Exercises on SQL Bolt
-- [ ] Complete the [SQL Bolt tutorial](https://sqlbolt.com/)
+- [X] Complete the [SQL Bolt tutorial](https://sqlbolt.com/)
 
 ### General
 
