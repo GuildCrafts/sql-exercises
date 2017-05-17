@@ -2,7 +2,7 @@
 ## Challenge: Bobby's Hobbies
 ### Step 1
 [x] We've created a database of people and hobbies, and each row in hobbies is related to a row in persons via the person_id column. In this first step, insert one more row in persons and then one more row in hobbies that is related to the newly inserted person.
-
+```
 CREATE TABLE persons (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT,
@@ -31,9 +31,10 @@ INSERT INTO hobbies (person_id, name) VALUES (4, "coding");
 INSERT INTO hobbies (person_id, name) VALUES (4, "dilly-dallying");
 INSERT INTO hobbies (person_id, name) VALUES (4, "meowing");
 INSERT INTO hobbies (person_id, name) VALUES (6, "WoW");
-
+```
 ### Step 2
 [x] results = persons name next to their hobby
+```
 CREATE TABLE persons (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT,
@@ -66,9 +67,10 @@ INSERT INTO hobbies (person_id, name) VALUES (6, "WoW");
 SELECT persons.name, hobbies.name FROM persons
     JOIN hobbies
     ON persons.id = hobbies.person_id;
-
+```
 ### Step 3
 [x] Now, add an additional query that shows only the name and hobbies of 'Bobby McBobbyFace', using JOIN combined with WHERE.
+```
 CREATE TABLE persons (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT,
@@ -105,11 +107,12 @@ SELECT persons.name, hobbies.name FROM persons
     JOIN hobbies
     ON persons.id = hobbies.person_id
     WHERE persons.name = "Bobby McBobbyFace";
-
+```
+===
 ## Challenge: Customer's Orders
 ### Step 1
 [x] We've created a database for customers and their orders. Not all of the customers have made orders, however. Come up with a query that lists the name and email of every customer followed by the item and price of orders they've made. Use a LEFT OUTER JOIN so that a customer is listed even if they've made no orders, and don't add any ORDER BY.
-
+```
 CREATE TABLE customers (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT,
@@ -136,11 +139,11 @@ SELECT customers.name, customers.email, orders.item, orders.price
     FROM customers 
     LEFT OUTER JOIN orders
     ON customers.id = orders.customer_id;
-
+```
 ### Step 2
 [x] Now, create another query that will result in one row per each customer, with their name, email, and total amount of money they've spent on orders. Sort the rows according to the total money spent, from the most spent to the least spent.
 (Tip: You should always GROUP BY on the column that is most likely to be unique in a row.)
-
+```
 CREATE TABLE customers (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT,
@@ -174,11 +177,12 @@ SELECT customers.name, customers.email, SUM(price) AS orders
     ON customers.id = orders.customer_id
     GROUP BY name
     ORDER BY price DESC;
-
+```
+===
 ## Challenge: Sequels in SQL
 ### Step 1
 [x] We've created a table with all the 'Harry Potter' movies, with a sequel_id column that matches the id of the sequel for each movie. Issue a SELECT that will show the title of each movie next to its sequel's title (or NULL if it doesn't have a sequel).
-
+```
 CREATE TABLE movies (id INTEGER PRIMARY KEY AUTOINCREMENT,
     title TEXT,
     released INTEGER,
@@ -205,11 +209,11 @@ SELECT movies.title, sequel.title as sequel
     FROM movies
     LEFT OUTER JOIN movies sequel 
     ON movies.sequel_id = sequel.id;
-
+```
 ## Challenge: FriendBook
 ### Step 1
 [x] We've created a database for a friend networking site, with a table storing data on each person, a table on each person's hobbies, and a table of friend connections between the people. In this first step, use a JOIN to display a table showing people's names with their hobbies.
-
+```
 CREATE TABLE persons (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     fullname TEXT,
@@ -251,10 +255,10 @@ SELECT persons.fullname, hobbies.name FROM persons
     JOIN hobbies
     ON persons.id = hobbies.person_id
     ;
-
+```
 ### Step 2
 [x] We've created a database for a friend networking site, with a table storing data on each person, a table on each person's hobbies, and a table of friend connections between the people. In this first step, use a JOIN to display a table showing people's names with their hobbies.
-
+```
 CREATE TABLE persons (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     fullname TEXT,
@@ -304,10 +308,11 @@ SELECT a.fullname, b.fullname
     JOIN persons b
     ON person2_id = b.id
 ;
-
+```
+===
 ## Project: Famous people
 [x] In this project, you’re going to make your own table with some small set of “famous people”, then make more tables about things they do and join those to create nice human readable lists.
-
+```
 CREATE TABLE top_movies (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, year_released INTEGER, genre TEXT, actor TEXT, rating INTEGER);
 
 INSERT INTO top_movies (name, year_released, genre, actor, rating) VALUES ("Shawshank Redemption", 1994, "Drama", "Morgan Freeman", 9.2);
@@ -333,3 +338,4 @@ INSERT INTO top_movies (name, year_released, genre, actor, rating) VALUES ("Leon
 
 SELECT actor FROM top_movies
 GROUP BY actor;
+```
