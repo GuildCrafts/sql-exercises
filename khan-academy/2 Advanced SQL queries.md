@@ -2,7 +2,7 @@
 
 ## Challenge: Karaoke song selector
 ### Step 1
-[x] Ever sung karaoke? It's a place where you sing songs with your friends, and it's a lot of fun. We've created a table with songs, and in this challenge, you'll use queries to decide what songs to sing. For the first step, select all the song titles.
+ [x] Ever sung karaoke? It's a place where you sing songs with your friends, and it's a lot of fun. We've created a table with songs, and in this challenge, you'll use queries to decide what songs to sing. For the first step, select all the song titles.
 ```
 CREATE TABLE songs (
     id INTEGER PRIMARY KEY,
@@ -31,9 +31,9 @@ INSERT INTO songs (title, artist, mood, duration, released)
     
 SELECT title FROM songs;
 ```
-===
+
 ### Step 2
-[x]epic song released after 1990
+ [x]epic song released after 1990
 ```
 CREATE TABLE songs (
     id INTEGER PRIMARY KEY,
@@ -63,9 +63,9 @@ INSERT INTO songs (title, artist, mood, duration, released)
 SELECT title FROM songs;
 SELECT title FROM songs WHERE mood = "epic" OR released > 1989;
 ```
-===
+
 ### Step 3
-[x]People get picky at the end of the night. Add another SELECT that uses AND to show the titles of songs that are 'epic', and released after 1990, and less than 4 minutes long.
+ [x]People get picky at the end of the night. Add another SELECT that uses AND to show the titles of songs that are 'epic', and released after 1990, and less than 4 minutes long.
 Note that the duration column is measured in seconds.
 ```
 CREATE TABLE songs (
@@ -100,7 +100,7 @@ SELECT title From songs WHERE mood = "epic" AND released > 1989 AND duration < 2
 ===
 ## Challenge: Playlist maker
 ### Step 1
-[x] We've created a database of songs and artists, and you'll make playlists from them in this challenge. In this first step, select the title of all the songs by the artist named 'Queen'.
+ [x] We've created a database of songs and artists, and you'll make playlists from them in this challenge. In this first step, select the title of all the songs by the artist named 'Queen'.
 ```
 CREATE TABLE artists (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -164,7 +164,7 @@ INSERT INTO songs (artist, title)
 SELECT title FROM songs WHERE artist="Queen";
 ```
 ### Step 2
-[x] pop genre
+ [x] pop genre
 ```
 CREATE TABLE artists (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -229,7 +229,7 @@ SELECT title FROM songs WHERE artist="Queen";
 SELECT name FROM artists WHERE genre ="Pop";
 ```
 ### Step 3
-[x] To finish creating the 'Pop' playlist, add another query that will select the title of all the songs from the 'Pop' artists. It should use IN on a nested subquery that's based on your previous query.
+ [x] To finish creating the 'Pop' playlist, add another query that will select the title of all the songs from the 'Pop' artists. It should use IN on a nested subquery that's based on your previous query.
 ```
 CREATE TABLE artists (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -297,7 +297,7 @@ SELECT title FROM songs WHERE artist IN (SELECT name From artists WHERE genre = 
 ===
 ## Challenge: The wordiest author
 ### Step 1
-[x] We've created a database of a few popular authors and their books, with word counts for each book. In this first step, select all the authors who have written more than 1 million words, using GROUP BY and HAVING. Your results table should include the 'author' and their total word count as a 'total_words' column.
+ [x] We've created a database of a few popular authors and their books, with word counts for each book. In this first step, select all the authors who have written more than 1 million words, using GROUP BY and HAVING. Your results table should include the 'author' and their total word count as a 'total_words' column.
 ```
 CREATE TABLE books (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -344,7 +344,7 @@ HAVING total_words > 1000000
 ;
 ```
 ### Step 2
-[x] Now select all the authors that write more than an average of 150,000 words per book. Your results table should include the 'author' and average words as an 'avg_words' column.
+ [x] Now select all the authors that write more than an average of 150,000 words per book. Your results table should include the 'author' and average words as an 'avg_words' column.
 ```
 CREATE TABLE books (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -397,7 +397,7 @@ HAVING avg_words > 150000
 ===
 ## Challenge: Gradebook
 ### Step 1
-[x] We've created a database to track student grades, with their name, number grade, and what percent of activities they've completed. In this first step, select all of the rows, and display the name, number_grade, and percent_completed, which you can compute by multiplying and rounding the fraction_completed column.
+ [x] We've created a database to track student grades, with their name, number grade, and what percent of activities they've completed. In this first step, select all of the rows, and display the name, number_grade, and percent_completed, which you can compute by multiplying and rounding the fraction_completed column.
 ```
 CREATE TABLE student_grades (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -421,7 +421,7 @@ INSERT INTO student_grades (name, number_grade, fraction_completed)
 SELECT name, number_grade, ROUND(fraction_completed*100) AS percent_completed FROM student_grades;
 ```
 ### Step 2
-[x] We've created a database to track student grades, with their name, number grade, and what percent of activities they've completed. In this first step, select all of the rows, and display the name, number_grade, and percent_completed, which you can compute by multiplying and rounding the fraction_completed column.
+ [x] We've created a database to track student grades, with their name, number grade, and what percent of activities they've completed. In this first step, select all of the rows, and display the name, number_grade, and percent_completed, which you can compute by multiplying and rounding the fraction_completed column.
 ```
 CREATE TABLE student_grades (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -456,7 +456,7 @@ GROUP BY letter_grade;
 ```
 ===
 ## Project Data dig
-[x] We’ve curated a set of interesting data sets for you: Top movies, Top countries by population, Solar system objects by size, Marvel characters, Furniture store sales, Earned KA badges, Winston's donut logs, Card game results, and NFL draft picks.
+ [x] We’ve curated a set of interesting data sets for you: Top movies, Top countries by population, Solar system objects by size, Marvel characters, Furniture store sales, Earned KA badges, Winston's donut logs, Card game results, and NFL draft picks.
 Pick one of those data sets or create a data set like that, and use advanced SELECT queries to discover things about the data. What sort of questions might one have about that data, like if they were using it for an app or a business idea? Here are some ideas:
 ```
 CREATE TABLE top_movies (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, year_released INTEGER, genre TEXT, rating INTEGER);

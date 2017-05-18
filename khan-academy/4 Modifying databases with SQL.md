@@ -1,7 +1,7 @@
 # Modifying databases with SQL
 ## Challenge: Dynamic Documents
 ### Step 1
-[x] We've created a database for a documents app, with rows for each document with it's title, content, and author. In this first step, use UPDATE to change the author to 'Jackie Draper' for all rows where it's currently 'Jackie Paper'. Then re-select all the rows to make sure the table changed like you expected.
+ [x] We've created a database for a documents app, with rows for each document with it's title, content, and author. In this first step, use UPDATE to change the author to 'Jackie Draper' for all rows where it's currently 'Jackie Paper'. Then re-select all the rows to make sure the table changed like you expected.
 ```
 CREATE table documents (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -25,7 +25,7 @@ UPDATE documents SET content = "Jackie Draper" WHERE author = "Jackie Paper";
 SELECT * FROM documents;
 ```
 ### Step 2
-[x] Now you'll delete a row, being very careful not to delete all the rows. Only delete the row where the title is 'Things I'm Afraid Of'. Then re-select all the rows to make sure the table changed like you expected.
+ [x] Now you'll delete a row, being very careful not to delete all the rows. Only delete the row where the title is 'Things I'm Afraid Of'. Then re-select all the rows to make sure the table changed like you expected.
 ```
 CREATE table documents (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -53,7 +53,7 @@ SELECT * FROM documents
 ===
 ## Challenge: Clothing alterations
 ### Step 1
-[x] We've created a database of clothes, and decided we need a price column. Use ALTER to add a 'price' column to the table. Then select all the columns in each row to see what your table looks like now.
+ [x] We've created a database of clothes, and decided we need a price column. Use ALTER to add a 'price' column to the table. Then select all the columns in each row to see what your table looks like now.
 ```
 CREATE TABLE clothes (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -72,7 +72,7 @@ ALTER TABLE clothes ADD price INTEGER;
 SELECT * FROM clothes;
 ```
 ### Step 2
-[x] update cloths pricing
+ [x] update cloths pricing
 ```
 CREATE TABLE clothes (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -97,7 +97,7 @@ UPDATE clothes SET price = 30 WHERE id = 3;
 SELECT * FROM clothes;
 ```
 ### Step 3
-[x] Now insert a new item into the table that has all three attributes filled in, including 'price'. Do one final SELECT of all the rows to check it worked.
+ [x] Now insert a new item into the table that has all three attributes filled in, including 'price'. Do one final SELECT of all the rows to check it worked.
 ```
 CREATE TABLE clothes (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
