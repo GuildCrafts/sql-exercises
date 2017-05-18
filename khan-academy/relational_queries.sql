@@ -1,0 +1,1 @@
+-- Solution SQL for the project from the Relational Queries course ("Famous people")

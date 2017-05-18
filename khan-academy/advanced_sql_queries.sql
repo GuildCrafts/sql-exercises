@@ -1,0 +1,1 @@
+-- Solution SQL for the project from the Advanced SQL queries course ("Data dig")
