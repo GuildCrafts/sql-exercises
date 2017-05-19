@@ -1,0 +1,5 @@
+LOAD DATA INFILE '/data/students.csv'
+INTO TABLE students
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+IGNORE 1 ROWS;
