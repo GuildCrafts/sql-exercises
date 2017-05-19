@@ -1,0 +1,5 @@
+LOAD DATA INFILE '/data/friends.csv'
+INTO TABLE friend
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+IGNORE 1 ROWS;
