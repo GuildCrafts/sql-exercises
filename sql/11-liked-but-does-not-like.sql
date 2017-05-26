@@ -5,7 +5,6 @@ SELECT liker.name AS a, liker.grade, likee.name AS likedButDoesNotLike, likee.gr
 	JOIN student liker
 	ON student_like.liker_id = liker.id
 	WHERE likee.id NOT IN (
-		SELECT liker_id
+	    SELECT liker_id
 		FROM student_like
-		)
-;
+		);
